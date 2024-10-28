@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Screen</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;    
+            font-family: Raleway, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(90deg, #C7C5F4, #776BCC);        
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh; /* Centering the container */
+        }
+
+        .screen {        
+            background: linear-gradient(90deg, #5D54A4, #7C78B8);        
+            position: relative;    
+            height: 600px; /* Fixed height */
+            width: 400px;    
+            box-shadow: 0px 0px 24px #5C5696;
+            display: flex; /* Added flex to center content */
+            align-items: center; /* Center content vertically */
+            justify-content: center; /* Center content horizontally */
+        }
+
+        .screen__content {
+            z-index: 1;
+            position: relative;    
+            width: 100%; /* Full width */
+        }
+
+        /* Removed background shapes */
+        .screen__background {        
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 0;
+        }
+
+        .login {
+            width: 320px;
+            padding: 30px;
+            padding-top: 30px;
+            background-color: white; /* White background for the form */
+            border-radius: 20px; /* Add rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for better form visibility */
+        }
+
+        /* Align the title to the top of the form and change its color to bold black */
+        .login h1 {
+            text-align: center;
+            color: #000; /* Black color */
+            font-weight: bold; /* Bold text */
+            margin-bottom: 20px;
+            font-size: 36px;
+        }
+
+        .login .input-container {
+            position: relative;
+            margin-bottom: 16px;
+        }
+
+        .login input {
+            width: 100%;
+            padding: 10px 40px 10px 40px; /* Added padding for icons */
+            border: 1px solid #D4D3E8;
+            border-radius: 8px;
+        }
+
+        .input-container .icon {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #D4D3E8; /* Icon color */
+        }
+
+        .login__submit {
+            background: #5D54A4; /* Changed button background to match the theme */
+            font-size: 14px;
+            margin-top: 20px;
+            padding: 16px 20px;
+            border-radius: 26px;
+            border: 1px solid #D4D3E8;
+            text-transform: uppercase;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            color: white;
+            box-shadow: 0px 2px 2px #5C5696;
+            cursor: pointer;
+            transition: .2s;
+        }
+
+        .login__submit:active,
+        .login__submit:focus,
+        .login__submit:hover {
+            border-color: #6A679E;
+            outline: none;
+        }
+
+        .button__icon {
+            font-size: 24px;
+            margin-left: auto;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="screen">
+            <div class="screen__content">
+                <form class="login" method="post" action="Insert">
+                    <!-- Title is now bold and black -->
+                    <h1>Insert Page</h1>
+
+                    <!-- Input fields with icons -->
+                    <div class="input-container">
+                        <i class="icon fas fa-id-badge"></i>
+                        <input type="text" id="id" name="id" placeholder="Enter Employee ID">
+                    </div>
+
+                    <div class="input-container">
+                        <i class="icon fas fa-user"></i>
+                        <input type="text" id="ename" name="ename" placeholder="Enter Employee Name">
+                    </div>
+
+                    <div class="input-container">
+                        <i class="icon fas fa-home"></i>
+                        <input type="text" id="address" name="address" placeholder="Enter Employee Address">
+                    </div>
+					
+					<div class="input-container">
+                        <i class="icon fas fa-building"></i>
+                        <input type="text" id="dep" name="dep" placeholder="Enter Department">
+                    </div>
+					
+                    <div class="input-container">
+                        <i class="icon fas fa-calendar-alt"></i>
+                        <input type="date" id="dob" name="dob">
+                    </div>
+
+                    <div class="input-container">
+                        <i class="icon fas fa-envelope"></i>
+                        <input type="email" id="email" name="email" placeholder="Enter Email Address">
+                    </div>
+
+                    <div class="input-container">
+                        <i class="icon fas fa-lock"></i>
+                        <input type="password" id="pass" name="pass" placeholder="Enter Password">
+                    </div>
+
+                    <!-- Submit button -->
+                    <button class="button login__submit">
+                        <span class="button__text">Insert Record</span>
+                        <i class="button__icon fas fa-chevron-right"></i>
+                    </button>
+                </form>
+            </div>
+            <!-- Removed background shapes -->
+        </div>
+    </div>
+</body>
+</html>
